@@ -5,7 +5,7 @@ Continuous Metric Scale Recovery for CAD-Free 6D Object Pose Estimation from a S
 Code for our paper *Continuous Metric Scale Recovery for CAD-Free 6D Object Pose Estimation from a Single Reference Image*, submitted to The Visual Computer.
 
 The full source code will be released upon acceptance of the paper.
-
+![Qualitative results](Qualitative%20results%20on%20LINEMOD.png)
 ## About the method
 
 We propose a CAD-free 6D object pose estimation pipeline that requires only a single reference RGB image. The core algorithm, Template-Point ICP (TP-ICP), recovers the metric scale of a single-view-generated 3D proxy mesh by jointly optimizing scale and translation under a fixed template-derived rotation.
