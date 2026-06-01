@@ -15,3 +15,11 @@ Visualization results from the first round of simulations on LINEMOD (`Ism-lm_re
 
 Baidu Netdisk: https://pan.baidu.com/s/1uX-bz_GEfrMTaW3YU2wlaw?pwd=9j2w  
 Extraction code: 9j2w
+
+## Acknowledgments
+This work builds on three excellent open-source projects:
+- [SAM 3](https://github.com/facebookresearch/sam3) — Meta AI Research
+- [SAM 3D](https://github.com/facebookresearch/sam-3d-objects) — Meta AI Research
+- [SAM-6D](https://github.com/JiehongLin/SAM-6D) — Lin et al., CVPR 2024
+
+We thank the authors for releasing their code and pretrained models.
