@@ -1,0 +1,9 @@
+mbsor_percentile: 95.0
+sample_count: 5000
+sampling_seed: 2
+outlier_multiplier: 3.0
+max_iterations: 80
+tolerance: 0.0001
+minimum_correspondences: 10
+template_views: 42
+pem_detection_threshold: 0.32

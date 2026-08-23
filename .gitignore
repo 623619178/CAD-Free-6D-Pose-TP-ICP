@@ -1,0 +1,25 @@
+__pycache__/
+*.py[cod]
+*.egg-info/
+.pytest_cache/
+.DS_Store
+
+# Downloaded model weights.
+checkpoints/
+*.pth
+*.ckpt
+*.pkl
+
+# Runtime outputs and caches.
+outputs/
+logs/
+Benchmark_Outputs/
+temp_*/
+wandb/
+
+# Local datasets and generated assets, except the bundled demo proxy.
+BOP/
+best_images*/
+*.npz
+*.ply
+!examples/can/proxy_mesh.ply

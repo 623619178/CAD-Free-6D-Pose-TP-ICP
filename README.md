@@ -1,25 +1,48 @@
 # CAD-Free-6D-Pose-TP-ICP
-Continuous Metric Scale Recovery for CAD-Free 6D Object Pose Estimation from a Single Reference Image
-Code for our paper *Continuous Metric Scale Recovery for CAD-Free 6D Object Pose Estimation from a Single Reference Image*, submitted to The Visual Computer.
-The full source code will be released upon acceptance of the paper.
-![Qualitative results](Qualitative%20results%20on%20LINEMOD.png)
-## About the method
-We propose a CAD-free 6D object pose estimation pipeline that requires only a single reference RGB image. The core algorithm, Template-Point ICP (TP-ICP), recovers the metric scale of a single-view-generated 3D proxy mesh by jointly optimizing scale and translation under a fixed template-derived rotation.
-The pipeline integrates three off-the-shelf components without retraining:
-- SAM 3 — concept-driven segmentation
-- SAM 3D — single-view 3D reconstruction
-- SAM-6D — coarse-to-fine pose matching
-TP-ICP serves as the bridge between the scale-ambiguous canonical-space proxy mesh and the metric-space query depth observation.
-## First-round simulation results
-Visualization results from the first round of simulations on LINEMOD (`Ism-lm_result_images.zip`) are available at:
 
-Baidu Netdisk: https://pan.baidu.com/s/1uX-bz_GEfrMTaW3YU2wlaw?pwd=9j2w  
-Extraction code: 9j2w
+Code for the paper **Continuous Metric Scale Recovery for CAD-Free 6D Object
+Pose Estimation from a Single Reference Image**.
+
+![Qualitative results](Qualitative%20results%20on%20LINEMOD.png)
+
+## About
+
+This repository provides the implementation of TP-ICP for continuous metric
+scale recovery and its integration with SAM-6D for 6D object pose estimation.
+TP-ICP estimates scale and translation for a CAD-free 3D proxy before final
+pose estimation.
+
+## Setup
+
+Create the SAM-6D environment and download the official checkpoints:
+
+```bash
+cd SAM-6D
+sh prepare.sh
+cd ..
+conda activate sam6d
+```
+
+## Inference
+
+```bash
+bash run_demo.sh
+```
+
+The main outputs are:
+
+```text
+outputs/can_demo/final_result.json
+outputs/can_demo/05_pem/sam6d_results/vis_pem.png
+```
 
 ## Acknowledgments
-This work builds on three excellent open-source projects:
-- [SAM 3](https://github.com/facebookresearch/sam3) — Meta AI Research
-- [SAM 3D](https://github.com/facebookresearch/sam-3d-objects) — Meta AI Research
-- [SAM-6D](https://github.com/JiehongLin/SAM-6D) — Lin et al., CVPR 2024
 
-We thank the authors for releasing their code and pretrained models.
+This work builds on the following open-source projects:
+
+- [SAM 3](https://github.com/facebookresearch/sam3)
+- [SAM 3D Objects](https://github.com/facebookresearch/sam-3d-objects)
+- [SAM-6D](https://github.com/JiehongLin/SAM-6D)
+- [BOP Toolkit](https://github.com/thodan/bop_toolkit)
+
+See [`THIRD_PARTY_NOTICES.md`](THIRD_PARTY_NOTICES.md) for attribution details.
